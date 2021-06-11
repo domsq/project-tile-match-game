@@ -35,7 +35,7 @@ button {
 /* Style homepage elements */
 
 #title-heading {
-    width: 40%;
+    width: 30%;
     text-align: center;
     background: darkslategray;
     color: whitesmoke;
@@ -44,12 +44,12 @@ button {
 }
 
 #button-box {
-    margin-top: 30%;
-    width: 30%;
+    margin-top: 25%;   
 }
 
-#gamestart {
-    float: right;
+#rules, #gamestart {
+    display: block;
+    margin: 25px auto;
 }
 
 .border {
@@ -86,4 +86,28 @@ button {
 footer {
     background: #E4E1D0;
     text-align: center;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1240px) {
+    #homepage {
+        background-size: 200%;
+    }
+
+    #button-box {
+        margin-top: 35%;   
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #title-heading {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #homepage {
+        background-size: 300%;
+    }
 }
