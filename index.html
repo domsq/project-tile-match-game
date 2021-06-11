@@ -18,16 +18,48 @@
                 <h1>Floral Match</h1>
             </div>
             <div id="button-box">
-            <button id="rules" class="btn border">How to play <i class="fas fa-book-open"></i></button>
-            <button id="gamestart" class="btn border">Start game <i class="fas fa-play"></i></button>
+                <button id="rules" class="btn border">How to play <i class="fas fa-book-open"></i></button>
+                <button id="gamestart" class="btn border">Start game <i class="fas fa-play"></i></button>
             </div>
         </div>
     </section>
     <footer>
-        <p>Any queries or issues? Contact us below:
+        <p>Any queries or issues? Let us know:
         </p>
         <button id="contact" class="btn border">Contact Us <i class="fas fa-hands-helping"></i></button>
     </footer>
+
+    <!--Guidance on modal forms sought from https://www.w3schools.com/howto/howto_css_modals.asp-->
+
+    <!--Modal form elements-->
+    <!--Rules page-->
+    <div class="modal-form" id="rules-page">
+        <div class="modal-content">
+            <span class="cls-btn"><i class="fas fa-window-close"></i></span>
+            <h2>Rules:</h2>
+            <p>The aim of the game is simple: Locate the matching pairs of tiles. You play the game by clicking on the
+                tiles to reveal their face side, noting their positions, then attempting to match them up with their
+                corresponding tile. You will only have a limited number of tries in which to do this.</p>
+        </div>
+    </div>
+    <!--Contact page-->
+    <div class="modal-form" id="contact-page">
+        <div class="modal-content">
+            <span class="cls-btn"><i class="fas fa-window-close"></i></span>
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" required>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="comments">Comments</label>
+                <textarea id="comments" cols="30" rows="10" required></textarea>
+                <button id="form-submit" type="submit" class="btn border">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <!--Script for Font Awesome icons-->
     <script src="https://kit.fontawesome.com/ddf0e52b9b.js" crossorigin="anonymous"></script>
     <!--Link to script.js-->
