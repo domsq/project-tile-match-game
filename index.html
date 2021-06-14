@@ -18,7 +18,7 @@
                 <h1>Floral Match</h1>
             </div>
             <div id="button-box">
-                <button id="rules" class="btn border">How to play <i class="fas fa-book-open"></i></button>
+                <button id="rules" class="btn border" onclick="openRulesPage()">How to play <i class="fas fa-book-open"></i></button>
                 <button id="gamestart" class="btn border">Start game <i class="fas fa-play"></i></button>
             </div>
         </div>
@@ -35,7 +35,7 @@
     <!--Rules page-->
     <div class="modal-form" id="rules-page">
         <div class="modal-content border">
-            <span class="cls-btn" id="close-rules"><i class="fas fa-window-close"></i></span>
+            <span class="cls-btn" id="close-rules" onclick="closeRulesPage()"><i class="fas fa-window-close"></i></span>
             <h2>Rules:</h2>
             <p>The aim of the game is simple: locate the matching pairs of tiles. You play the game by clicking on the
                 tiles to reveal their face side, remembering their positions, then attempting to match them up with their

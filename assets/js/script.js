@@ -5,13 +5,9 @@ function openRulesPage() {
     document.getElementById('rules-page').style.display = 'block';
 }
 
-document.getElementById('rules').addEventListener('click', openRulesPage);
-
 function closeRulesPage() {
     document.getElementById('rules-page').style.display = 'none';
 }
-
-document.getElementById('close-rules').addEventListener('click', closeRulesPage);
 
 // To open / close the contact us page
 function openContactPage() {
