@@ -150,7 +150,7 @@ footer {
     width: 150px;
     height: 150px;
     margin: 4px;  
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 3px;  
 }
 
@@ -166,7 +166,8 @@ footer {
 
 .game-btn {
     font-size: 2rem;
-    background: transparent;    
+    background: transparent; 
+    color: whitesmoke;   
 }
 
 .game-btn:hover {
@@ -179,17 +180,24 @@ footer {
 
 #game-area {
     width: fit-content;
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 30px;    
 }
 
 #scoring-area p {
     display: inline;
     font-size: 1.1rem;
+    color: whitesmoke;
 }
 
 #timer-count {
     float: right;
     margin-right: 50px;
+}
+
+#game-section {
+    background: darkslategray url(../images/green-moss-yoyo-dy.jpg) center center / 100% no-repeat;
+    min-height: calc(100vh - 116px);
 }
 
 /* Media queries */
