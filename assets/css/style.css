@@ -160,6 +160,23 @@ footer {
     grid-template-columns: auto auto auto auto;    
 }
 
+.game-btn {
+    font-size: 2rem;
+    background: transparent;    
+}
+
+.game-btn:hover {
+    cursor: pointer;
+}
+
+#game-quit {
+    float: right;
+}
+
+#game-area {
+    width: fit-content;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 1240px) {
