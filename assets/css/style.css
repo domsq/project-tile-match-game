@@ -154,6 +154,10 @@ footer {
     border-radius: 3px;  
 }
 
+.tile:hover {
+    cursor: pointer;
+}
+
 /* Guidance on grid layout from https://www.w3schools.com/css/css_grid.asp */
 #tile-grid {
     display: inline-grid;      
@@ -175,6 +179,17 @@ footer {
 
 #game-area {
     width: fit-content;
+    margin: 30px auto;
+}
+
+#scoring-area p {
+    display: inline;
+    font-size: 1.1rem;
+}
+
+#timer-count {
+    float: right;
+    margin-right: 50px;
 }
 
 /* Media queries */
