@@ -210,6 +210,17 @@ footer {
     #button-box {
         margin-top: 35%;   
     }
+
+    #game-section {
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .tile {
+        width: 125px;
+        height: 125px;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -226,8 +237,42 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    #game-section {
+      background-size: 300%;
+  }
+
+  .tile {
+      width: 100px;
+      height: 100px;
+  }
+}
+
 @media screen and (max-width: 560px) {
     #homepage {
         background-size: 300%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .tile {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tile {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .game-btn {
+        font-size: 1rem;
+    }
+
+    #scoring-area p {
+        font-size: 0.8rem;
     }
 }
