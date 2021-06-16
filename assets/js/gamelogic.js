@@ -65,4 +65,16 @@ const tiles = [
         name: 'white flower',
         path: 'assets/images/white-pink-flower-angelika-paduch.jpg'
     }
-]
+];
+
+// Setup the grid of tiles
+
+function createGrid() {
+    for (let i = 0; i < tiles.length; i++) {
+        let tile = document.createElement('img');
+        tile.setAttribute('src', 'assets/images/tile-back.jpg');
+        tile.setAttribute('data-id', i);
+        document.getElementById('tile-grid').appendChild(tile);
+    }
+}
+
