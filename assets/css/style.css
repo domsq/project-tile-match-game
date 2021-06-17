@@ -150,7 +150,7 @@ footer {
     width: 150px;
     height: 150px;
     margin: 4px;  
-    border: 1px solid whitesmoke;
+    border: 2px solid lightgray;
     border-radius: 3px;  
 }
 
@@ -163,6 +163,10 @@ footer {
     display: inline-grid;      
     grid-template-columns: auto auto auto auto;    
 }
+
+#game-buttons {
+    background: darkslategray;
+} 
 
 .game-btn {
     font-size: 2rem;
@@ -186,17 +190,22 @@ footer {
 
 #scoring-area p {
     display: inline;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: whitesmoke;
+}
+
+#scoring-area {
+    background: darkslategray;
 }
 
 #timer-count {
     float: right;
     margin-right: 50px;
+    color: light
 }
 
 #game-section {
-    background: darkslategray url(../images/green-moss-yoyo-dy.jpg) center center / 100% no-repeat;
+    background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
     min-height: calc(100vh - 116px);
 }
 
