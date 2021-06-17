@@ -77,4 +77,3 @@ function createGrid() {
         document.getElementById('tile-grid').appendChild(tile);
     }
 }
-
