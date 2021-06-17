@@ -1,4 +1,4 @@
-// Create array to hold tile values
+// Create array to hold tile values, which will represent the tile face sides
 
 const tiles = [
     {
@@ -67,7 +67,7 @@ const tiles = [
     }
 ];
 
-// Setup the grid of tiles
+// Setup the grid of tiles, which will start face down
 
 function createGrid() {
     for (let i = 0; i < tiles.length; i++) {
@@ -75,7 +75,22 @@ function createGrid() {
         tile.setAttribute('src', 'assets/images/tile-back.jpg');
         tile.setAttribute('data-id', i);
         document.getElementById('tile-grid').appendChild(tile);
+        tile.addEventListener('click', revealTile);
     }
 }
 
-createGrid()
+// Arrays to store chosen tiles and their respective ID values
+
+let tileChoice = [];
+let tileChoiceId = [];
+
+// Function to reveal tiles
+
+function revealTile() {
+    let tileId = this.getAttribute('data-id');
+    tileChoice.push(tiles[tileId].name);
+    tileChoiceId.push(tileId);
+    this.setAttribute('src', tiles[tileId].path);
+}
+
+createGrid();
