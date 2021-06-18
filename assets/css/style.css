@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Lato&display=swap');
 
 /* Set font values to use */
 h1, h2 {
-    font-family: 'Fascinate', Arial, Helvetica, sans-serif;
+    font-family: 'Chicle', Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'Lato', sans-serif;    
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Clear initial values for border, padding, margin */
@@ -35,23 +35,23 @@ button {
 /* Style homepage elements */
 
 #title-heading {
-    width: 30%;
+    width: 40%;
     text-align: center;
     background: darkslategray;
     color: whitesmoke;
     padding: 10px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;  
-    font-size: larger;    
+    letter-spacing: 3.5px;  
+    font-size: 2rem;    
 }
 
 #button-box {
-    margin-top: 25%;   
+    margin-top: 15%;   
 }
 
 #rules, #gamestart {
     display: block;
-    margin: 25px auto;
+    margin: 35px auto;
 }
 
 .border {
@@ -65,8 +65,8 @@ button {
     background: #5b5b5b;
     color: whitesmoke;
     font-weight: bold; 
-    letter-spacing: 1.1px;
-    font-size: larger;
+    letter-spacing: 1.2px;
+    font-size: 1.5rem;
 }
 
 .btn:hover {
