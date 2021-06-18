@@ -70,6 +70,7 @@ const tiles = [
 // Setup the grid of tiles, which will start face down
 
 function createGrid() {
+    tiles.sort(() => 0.5 - Math.random()); // Randomise the positions of the items in the main array to allow "shuffling"
     for (let i = 0; i < tiles.length; i++) {
         let tile = document.createElement('img');
         tile.setAttribute('src', 'assets/images/tile-back.jpg');
@@ -102,7 +103,7 @@ function verifyMatch() {
     let allTiles = document.querySelectorAll('img');
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
-    if (tileChoice[0] === tileChoice[1]) {
+    if (tileChoice[0] === tileChoice[1]) {        
         allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
         allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
     } else {
