@@ -91,6 +91,26 @@ function revealTile() {
     tileChoice.push(tiles[tileId].name);
     tileChoiceId.push(tileId);
     this.setAttribute('src', tiles[tileId].path);
+    if (tileChoice.length === 2) {
+        setTimeout(verifyMatch, 400);
+    }
+}
+
+// Check whether the tiles have matched or not and then empty the tileChoice and tileChoiceId arrays, as they can never be larger than 2 items  
+
+function verifyMatch() {
+    let allTiles = document.querySelectorAll('img');
+    const choiceOneId = tileChoiceId[0];
+    const choiceTwoId = tileChoiceId[1];
+    if (tileChoice[0] === tileChoice[1]) {
+        allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
+        allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
+    } else {
+        allTiles[choiceOneId].setAttribute('src', 'assets/images/tile-back.jpg');
+        allTiles[choiceTwoId].setAttribute('src', 'assets/images/tile-back.jpg');
+    }
+    tileChoice = [];
+    tileChoiceId = [];
 }
 
 createGrid();
