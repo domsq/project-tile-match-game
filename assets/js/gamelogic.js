@@ -85,6 +85,10 @@ function createGrid() {
 let tileChoice = [];
 let tileChoiceId = [];
 
+// Array to store the tiles successfully matched
+
+let tilesMatched = [];
+
 // Function to reveal tiles
 
 function revealTile() {
@@ -92,7 +96,7 @@ function revealTile() {
     tileChoice.push(tiles[tileId].name);
     tileChoiceId.push(tileId);
     this.setAttribute('src', tiles[tileId].path);
-    if (tileChoice.length === 2) {
+    if (tileChoice.length === 2) { // Action to take when a match is attempted
         setTimeout(verifyMatch, 400);
     }
 }
@@ -104,6 +108,7 @@ function verifyMatch() {
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
     if (tileChoice[0] === tileChoice[1]) {        
+        tilesMatched.push(tileChoice);
         allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
         allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
     } else {
@@ -112,6 +117,10 @@ function verifyMatch() {
     }
     tileChoice = [];
     tileChoiceId = [];
+    document.getElementById('tries').innerText = ' ' + tilesMatched.length;
+    if (tilesMatched.length === tiles.length/2) { // Action to take when all tiles successfully matched
+        document.getElementById('tries').innerText = ' ' + 'You got all matches, well done!';
+    }
 }
 
 createGrid();
