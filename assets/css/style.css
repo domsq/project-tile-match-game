@@ -41,7 +41,7 @@ button {
     color: whitesmoke;
     padding: 10px;
     text-transform: uppercase;
-    letter-spacing: 3.5px;  
+    letter-spacing: 5px;  
     font-size: 2rem;    
 }
 
@@ -168,6 +168,7 @@ footer {
     background: #E4E1D0;
     padding: 5px;
     border-radius: 4px;
+    margin-top: 15px;
 } 
 
 .game-btn {
@@ -200,6 +201,7 @@ footer {
     background: #E4E1D0;
     padding: 5px;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 #timer-count {
@@ -211,6 +213,9 @@ footer {
 #game-section {
     background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
     min-height: calc(100vh - 122px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Media queries */
@@ -287,5 +292,17 @@ footer {
 
     #scoring-area p {
         font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    #homepage, #game-section {
+        min-height: calc(100vh - 114px);
     }
 }
