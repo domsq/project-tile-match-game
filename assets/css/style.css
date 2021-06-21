@@ -25,7 +25,7 @@ button {
 
 #homepage {
     background: darkslategray url(../images/field-of-flowers-francesco-ungaro.jpg) center center / 100% no-repeat;
-    min-height: calc(100vh - 116px);
+    min-height: calc(100vh - 122px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,13 +165,15 @@ footer {
 }
 
 #game-buttons {
-    background: darkslategray;
+    background: #E4E1D0;
+    padding: 5px;
+    border-radius: 4px;
 } 
 
 .game-btn {
     font-size: 2rem;
     background: transparent; 
-    color: whitesmoke;   
+    color: #2a2a2a;   
 }
 
 .game-btn:hover {
@@ -191,11 +193,13 @@ footer {
 #scoring-area p {
     display: inline;
     font-size: 1.2rem;
-    color: whitesmoke;
+    color: #2a2a2a;
 }
 
 #scoring-area {
-    background: darkslategray;
+    background: #E4E1D0;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 #timer-count {
@@ -206,7 +210,7 @@ footer {
 
 #game-section {
     background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
-    min-height: calc(100vh - 116px);
+    min-height: calc(100vh - 122px);
 }
 
 /* Media queries */
