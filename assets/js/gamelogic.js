@@ -1,71 +1,42 @@
 // Create array to hold tile values, which will represent the tile face sides
 
-const tiles = [
-    {
+// Amended array structure following discussion with mentor
+const tileConfig = [{
         name: 'blue flower',
-        path: 'assets/images/blue-flower-gabriel-manlake.jpg'
-    },
-    {
-        name: 'blue flower',
-        path: 'assets/images/blue-flower-gabriel-manlake.jpg'
+        path: 'blue-flower-gabriel-manlake.jpg'
     },
     {
         name: 'daisy',
-        path: 'assets/images/daisy-flower-marissa-daeger.jpg'
-    },
-    {
-        name: 'daisy',
-        path: 'assets/images/daisy-flower-marissa-daeger.jpg'
+        path: 'daisy-flower-marissa-daeger.jpg'
     },
     {
         name: 'dark pink flower',
-        path: 'assets/images/dark-pink-flower-tra-tran.jpg'
-    },
-    {
-        name: 'dark pink flower',
-        path: 'assets/images/dark-pink-flower-tra-tran.jpg'
+        path: 'dark-pink-flower-tra-tran.jpg'
     },
     {
         name: 'light purple flower',
-        path: 'assets/images/light-purple-flower-karl-heinz-muller.jpg'
-    },
-    {
-        name: 'light purple flower',
-        path: 'assets/images/light-purple-flower-karl-heinz-muller.jpg'
+        path: 'light-purple-flower-karl-heinz-muller.jpg'
     },
     {
         name: 'pink flower',
-        path: 'assets/images/pink-flower-achim-ruhnau.jpg'
-    },
-    {
-        name: 'pink flower',
-        path: 'assets/images/pink-flower-achim-ruhnau.jpg'
+        path: 'pink-flower-achim-ruhnau.jpg'
     },
     {
         name: 'purple flower',
-        path: 'assets/images/purple-flower-frank-busch.jpg'
-    },
-    {
-        name: 'purple flower',
-        path: 'assets/images/purple-flower-frank-busch.jpg'
+        path: 'purple-flower-frank-busch.jpg'
     },
     {
         name: 'red flower',
-        path: 'assets/images/red-flower-mana5280.jpg'
-    },
-    {
-        name: 'red flower',
-        path: 'assets/images/red-flower-mana5280.jpg'
+        path: 'red-flower-mana5280.jpg'
     },
     {
         name: 'white flower',
-        path: 'assets/images/white-pink-flower-angelika-paduch.jpg'
-    },
-    {
-        name: 'white flower',
-        path: 'assets/images/white-pink-flower-angelika-paduch.jpg'
+        path: 'white-pink-flower-angelika-paduch.jpg'
     }
 ];
+
+// Allows array to be of required size
+let tiles = [...tileConfig, ...tileConfig];
 
 // Setup the grid of tiles, which will start face down
 
@@ -95,7 +66,7 @@ function revealTile() {
     let tileId = this.getAttribute('data-id');
     tileChoice.push(tiles[tileId].name);
     tileChoiceId.push(tileId);
-    this.setAttribute('src', tiles[tileId].path);
+    this.setAttribute('src', `assets/images/${tiles[tileId].path}`); // Amended following discussion with mentor
     if (tileChoice.length === 2) { // Action to take when a match is attempted
         setTimeout(verifyMatch, 400);
     }
@@ -107,7 +78,7 @@ function verifyMatch() {
     let allTiles = document.querySelectorAll('img');
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
-    if (tileChoice[0] === tileChoice[1]) {        
+    if (tileChoice[0] === tileChoice[1]) {
         tilesMatched.push(tileChoice);
         allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
         allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
@@ -118,7 +89,7 @@ function verifyMatch() {
     tileChoice = [];
     tileChoiceId = [];
     document.getElementById('tries').innerText = ' ' + tilesMatched.length;
-    if (tilesMatched.length === tiles.length/2) { // Action to take when all tiles successfully matched
+    if (tilesMatched.length === tileConfig.length) { // Action to take when all tiles successfully matched
         document.getElementById('tries').innerText = ' ' + 'You got all matches, well done!';
     }
 }
