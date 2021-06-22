@@ -239,6 +239,14 @@ footer {
         width: 125px;
         height: 125px;
     }
+
+    #game-section {
+        background-size: 250%;
+    }
+    
+    #homepage {
+        background-size: 250%;
+    }
 }
 
 @media screen and (max-width: 720px) {
