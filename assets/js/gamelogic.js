@@ -95,9 +95,7 @@ function verifyMatch() {
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
     if (tileChoice[0] === tileChoice[1]) {
-        tilesMatched.push(tileChoice);
-        allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
-        allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
+        tilesMatched.push(tileChoice);        
     } else {
         allTiles[choiceOneId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
         allTiles[choiceTwoId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
