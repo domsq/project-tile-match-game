@@ -1,3 +1,7 @@
+// Check that required DOM elements have loaded before setting up the game
+
+document.addEventListener('DOMContentLoaded', createGrid);
+
 // Create array to hold tile values, which will represent the tile face sides
 
 // Amended array structure following discussion with mentor
@@ -36,20 +40,8 @@ const tileConfig = [{
 ];
 
 // Allows array to be of required size
+
 let tiles = [...tileConfig, ...tileConfig];
-
-// Setup the grid of tiles, which will start face down
-
-function createGrid() {
-    tiles.sort(() => 0.5 - Math.random()); // Randomise the positions of the items in the main array to allow "shuffling"
-    for (let i = 0; i < tiles.length; i++) {
-        let tile = document.createElement('img');
-        tile.setAttribute('src', 'assets/images/tile-back.jpg');
-        tile.setAttribute('data-id', i);
-        document.getElementById('tile-grid').appendChild(tile);
-        tile.addEventListener('click', revealTile);
-    }
-}
 
 // Arrays to store chosen tiles and their respective ID values
 
@@ -59,6 +51,24 @@ let tileChoiceId = [];
 // Array to store the tiles successfully matched
 
 let tilesMatched = [];
+
+// Setup the grid of tiles, which will start face down
+
+function createGrid() {
+    shuffleTiles();
+    for (let i = 0; i < tiles.length; i++) {
+        let tile = document.createElement('img');
+        tile.setAttribute('src', 'assets/images/tile-back.jpg');
+        tile.setAttribute('data-id', i);
+        document.getElementById('tile-grid').appendChild(tile);
+        tile.addEventListener('click', revealTile);
+    }
+}
+
+// Moved to separate function as discussed with mentor
+function shuffleTiles () {
+    tiles.sort(() => 0.5 - Math.random()); // Randomise the positions of the items in the main array to allow "shuffling"
+}
 
 // Function to reveal tiles
 
@@ -96,10 +106,19 @@ function verifyMatch() {
     }
     tileChoice = [];
     tileChoiceId = [];
-    document.getElementById('tries').innerText = ' ' + tilesMatched.length;
+    updateTriesCounter();
+    checkForGameCompletion();
+}
+
+// Moved to separate function as discussed with mentor
+function checkForGameCompletion() {
     if (tilesMatched.length === tileConfig.length) { // Action to take when all tiles successfully matched
         document.getElementById('tries').innerText = ' ' + 'You got all matches, well done!';
     }
 }
 
-createGrid();
+// Moved to separate function as discussed with mentor
+function updateTriesCounter() {
+    document.getElementById('tries').innerText = ' ' + tilesMatched.length;
+}
+
