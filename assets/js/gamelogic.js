@@ -63,10 +63,16 @@ let tilesMatched = [];
 // Function to reveal tiles
 
 function revealTile() {
+    // If tile is disabled, don't allow it to be clicked a second time to force a match, as discussed with mentor
+    const isDisabled = this.getAttribute('data-disabled') === 'true';
+    if (isDisabled) {
+        return;
+    }
     let tileId = this.getAttribute('data-id');
     tileChoice.push(tiles[tileId].name);
     tileChoiceId.push(tileId);
     this.setAttribute('src', `assets/images/${tiles[tileId].path}`); // Amended following discussion with mentor
+    this.setAttribute('data-disabled', 'true'); // Disable tile once revealed, as discussed with mentor
     if (tileChoice.length === 2) { // Action to take when a match is attempted
         setTimeout(verifyMatch, 400);
     }
@@ -83,6 +89,8 @@ function verifyMatch() {
         allTiles[choiceOneId].setAttribute('style', 'visibility: hidden;');
         allTiles[choiceTwoId].setAttribute('style', 'visibility: hidden;');
     } else {
+        allTiles[choiceOneId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
+        allTiles[choiceTwoId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
         allTiles[choiceOneId].setAttribute('src', 'assets/images/tile-back.jpg');
         allTiles[choiceTwoId].setAttribute('src', 'assets/images/tile-back.jpg');
     }
