@@ -1,12 +1,12 @@
 # Floral Match
 
-Floral Match is all about finding the matching pairs of tiles within as few tries as possible. Users will click on a tile to reveal it, note what image has been shown, then try to locate the matching tile. It is aimed at users who are looking to test their memory, those looking for a simple game to help them relax, possibly as part of a mindfulness activity, or users who just want a fun distraction to pass the time. It will have relaxing imagery such as a welcoming landing page image and also flowers on the face side of the tiles. 
+The aim of Floral Match is to find the matching pairs of tiles within as few tries as possible. Users will click on a tile to reveal it, note what image has been shown, then try to locate the matching tile. It is aimed at users who are looking to test their memory, those looking for a simple game to help them relax, possibly as part of a mindfulness activity, or users who just want a fun distraction to pass the time. It will have relaxing imagery such as a welcoming landing page image and also flowers on the face side of the tiles. 
 
 ## UX
 
 ### Imagery
 
-For my wesbite, I went with a natural theme centred around flowers to promote the idea that playing the game could be used as part of a relaxation or mindfulness exercise. The landing page has a background image of a field of flowers and on the game page, the tile face sides are all flower images as well. The background image to the game page is a neutral image of a wall of leaves.
+For my website, I went with a natural theme centred around greenery and flowers to promote the idea that playing the game could be used as part of a relaxation or mindfulness exercise. The landing page has a background image of a field of flowers and on the game page, the tile face sides are all flower images. The background image to the game page is a simple image of a wall of leaves.
 
 ### Typography
 
@@ -23,7 +23,7 @@ User stories as follows:
 -	The user is looking for a game to help them relax<br>
 -	The user would like to play a game to pass the time 
 ### Returning users:
--	The user is looking to improve on their score from last time around<br>
+-	The user is looking to improve on their score from their last attempt<br>
 -	The user wants to see whether the game has any new features or functionality
 ### Frequent users:
 -	As per returning users
