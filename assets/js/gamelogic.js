@@ -52,6 +52,10 @@ let tileChoiceId = [];
 
 let tilesMatched = [];
 
+// Array to store total number of matching attempts
+
+let totalMatchAttempts = [];
+
 // Setup the grid of tiles, which will start face down
 
 function createGrid() {
@@ -91,6 +95,7 @@ function revealTile() {
 // Check whether the tiles have matched or not and then empty the tileChoice and tileChoiceId arrays, as they can never be larger than 2 items  
 
 function verifyMatch() {
+    totalMatchAttempts.push(tileChoice);
     let allTiles = document.querySelectorAll('img');
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
@@ -112,11 +117,13 @@ function verifyMatch() {
 function checkForGameCompletion() {
     if (tilesMatched.length === tileConfig.length) { // Action to take when all tiles successfully matched
         document.getElementById('tries').innerText = ' ' + 'You got all matches, well done!';
+    } else if (totalMatchAttempts.length === 30) { // Action to take if attempts exceed set limit
+        document.getElementById('tries').innerText = ' ' + 'Sorry, you ran out of attempts, try again...';
     }
 }
 
 // Moved to separate function as discussed with mentor
 function updateTriesCounter() {
-    document.getElementById('tries').innerText = ' ' + tilesMatched.length;
+    document.getElementById('tries').innerText = ' ' + totalMatchAttempts.length;
 }
 
