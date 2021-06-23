@@ -88,7 +88,7 @@ function clearValues() {
 
 // Function to reveal tiles
 
-function revealTile() {
+function revealTile() {      
     // If tile is disabled, don't allow it to be clicked a second time to force a match, as discussed with mentor
     const isDisabled = this.getAttribute('data-disabled') === 'true';
     if (isDisabled) {
@@ -100,8 +100,8 @@ function revealTile() {
     this.setAttribute('src', `assets/images/${tiles[tileId].path}`); // Amended following discussion with mentor
     this.setAttribute('data-disabled', 'true'); // Disable tile once revealed, as discussed with mentor
     if (tileChoice.length === 2) { // Action to take when a match is attempted
-        setTimeout(verifyMatch, 400);
-    }
+        setTimeout(verifyMatch, 400);        
+    }    
 }
 
 // Check whether the tiles have matched or not and then empty the tileChoice and tileChoiceId arrays, as they can never be larger than 2 items  
@@ -127,13 +127,14 @@ function verifyMatch() {
 
 // Moved to separate function as discussed with mentor
 function checkForGameCompletion() {
+    let finalResult = document.getElementById('tries').innerText;
     if (tilesMatched.length === tileConfig.length) { // Action to take when all tiles successfully matched
         document.getElementById('completion-innertext').innerHTML = `
         <h2>Well done! <i class="far fa-smile-beam"></i></h2>
-        <p>You managed to find all the matches, good job.</p>`;
+        <p>You managed to find all the matches in ${finalResult} attempts, good job!</p>`;
         // Logic to open modal, guidance from https://www.w3schools.com/howto/howto_css_modals.asp
         document.getElementById('completion-page').style.display = 'block';
-    } else if (totalMatchAttempts.length === 30) { // Action to take if attempts exceed set limit
+    } else if (totalMatchAttempts.length === 25) { // Action to take if attempts exceed set limit
         document.getElementById('completion-innertext').innerHTML = `
         <h2>Oh no! <i class="far fa-sad-tear"></i></h2>
         <p>You ran out of attempts, why not try again?</p>`;
