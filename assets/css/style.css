@@ -24,7 +24,7 @@ button {
 /* Set background on homepage */
 
 #homepage {
-    background: darkslategray url(../images/field-of-flowers-francesco-ungaro.jpg) center center / 100% no-repeat;
+    background: darkslategray url(../images/field-of-flowers-francesco-ungaro.jpg) center center / 125% no-repeat;
     min-height: calc(100vh - 134px);
     display: flex;
     justify-content: center;
@@ -225,7 +225,7 @@ h2 {
 }
 
 #game-section {
-    background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
+    background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 125% no-repeat;
     min-height: calc(100vh - 134px);
     display: flex;
     align-items: center;
@@ -275,21 +275,18 @@ h2 {
 
 @media screen and (max-width: 600px) {
     #game-section {
-      background-size: 300%;
+      background-size: 360%;
   }
+
+  #homepage {
+    background-size: 360%;
+}
 
     #tile-grid img {
       width: 100px;
       height: 100px;
   }
 }
-
-@media screen and (max-width: 560px) {
-    #homepage {
-        background-size: 300%;
-    }
-}
-
 
 @media screen and (max-width: 500px) {
     #tile-grid img {
