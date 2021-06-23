@@ -34,19 +34,27 @@ button {
 
 /* Style homepage elements */
 
+#container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background: #E4E1D0;
+}
+
 #title-heading {
-    width: 40%;
     text-align: center;
-    background: darkslategray;
-    color: whitesmoke;
+    color: darkslategray;
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 5px;  
-    font-size: 2rem;    
+    font-size: 2rem;  
+    margin-top: 15px;  
 }
 
 #button-box {
-    margin-top: 15%;   
+    margin-top: 15px;   
 }
 
 #rules, #gamestart {
@@ -61,7 +69,7 @@ button {
 }
 
 .btn {
-    padding: 6px;
+    padding: 10px;
     background: #5b5b5b;
     color: whitesmoke;
     font-weight: bold; 
@@ -227,10 +235,6 @@ h2 {
 @media screen and (max-width: 1240px) {
     #homepage {
         background-size: 200%;
-    }
-
-    #button-box {
-        margin-top: 35%;   
     }
 
     #game-section {
