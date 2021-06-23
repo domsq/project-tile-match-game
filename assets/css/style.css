@@ -210,6 +210,11 @@ footer {
     color: #2a2a2a;
 }
 
+#tries {
+    font-weight: bold;
+    color: red;
+}
+
 #game-section {
     background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
     min-height: calc(100vh - 122px);

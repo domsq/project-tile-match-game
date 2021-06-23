@@ -59,6 +59,7 @@ let totalMatchAttempts = [];
 // Setup the grid of tiles, which will start face down
 
 function createGrid() {
+    clearValues();
     shuffleTiles();
     for (let i = 0; i < tiles.length; i++) {
         let tile = document.createElement('img');
@@ -72,6 +73,17 @@ function createGrid() {
 // Moved to separate function as discussed with mentor
 function shuffleTiles () {
     tiles.sort(() => 0.5 - Math.random()); // Randomise the positions of the items in the main array to allow "shuffling"
+}
+
+// Function to ensure all required values cleared when resetting the game
+
+function clearValues() {
+    document.getElementById('tile-grid').innerHTML = '';
+    tileChoice = [];
+    tileChoiceId = [];
+    totalMatchAttempts = [];
+    tilesMatched = [];
+    document.getElementById('tries').innerText = ' 0';
 }
 
 // Function to reveal tiles
@@ -127,3 +139,6 @@ function updateTriesCounter() {
     document.getElementById('tries').innerText = ' ' + totalMatchAttempts.length;
 }
 
+// Assign functionality to reset button on grid
+
+document.getElementById('game-reset').addEventListener('click', createGrid);
