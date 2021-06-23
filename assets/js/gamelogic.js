@@ -128,9 +128,17 @@ function verifyMatch() {
 // Moved to separate function as discussed with mentor
 function checkForGameCompletion() {
     if (tilesMatched.length === tileConfig.length) { // Action to take when all tiles successfully matched
-        document.getElementById('tries').innerText = ' ' + 'You got all matches, well done!';
+        document.getElementById('completion-innertext').innerHTML = `
+        <h2>Well done! <i class="far fa-smile-beam"></i></h2>
+        <p>You managed to find all the matches, good job.</p>`;
+        // Logic to open modal, guidance from https://www.w3schools.com/howto/howto_css_modals.asp
+        document.getElementById('completion-page').style.display = 'block';
     } else if (totalMatchAttempts.length === 30) { // Action to take if attempts exceed set limit
-        document.getElementById('tries').innerText = ' ' + 'Sorry, you ran out of attempts, try again...';
+        document.getElementById('completion-innertext').innerHTML = `
+        <h2>Oh no! <i class="far fa-sad-tear"></i></h2>
+        <p>You ran out of attempts, why not try again?</p>`;
+        // Logic to open modal, guidance from https://www.w3schools.com/howto/howto_css_modals.asp
+        document.getElementById('completion-page').style.display = 'block';
     }
 }
 
@@ -142,3 +150,14 @@ function updateTriesCounter() {
 // Assign functionality to reset button on grid
 
 document.getElementById('game-reset').addEventListener('click', createGrid);
+
+// Function to close the game completion modal, guidance from https://www.w3schools.com/howto/howto_css_modals.asp
+
+function closeCompletionPage() {
+    document.getElementById('completion-page').style.display = 'none';
+    createGrid();
+}
+
+// Configure close button on game completion modal
+
+document.getElementById('close-completion-page').addEventListener('click', closeCompletionPage);
