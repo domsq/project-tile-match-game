@@ -100,7 +100,7 @@ function revealTile() {
     this.setAttribute('src', `assets/images/${tiles[tileId].path}`); // Amended following discussion with mentor
     this.setAttribute('data-disabled', 'true'); // Disable tile once revealed, as discussed with mentor
     if (tileChoice.length === 2) { // Action to take when a match is attempted
-        setTimeout(verifyMatch, 400);        
+        setTimeout(verifyMatch, 500);        
     }    
 }
 
