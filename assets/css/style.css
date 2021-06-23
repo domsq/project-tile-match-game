@@ -25,7 +25,7 @@ button {
 
 #homepage {
     background: darkslategray url(../images/field-of-flowers-francesco-ungaro.jpg) center center / 100% no-repeat;
-    min-height: calc(100vh - 122px);
+    min-height: calc(100vh - 134px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +88,7 @@ button {
     margin: 0 auto; 
     width: fit-content;
     padding: 10px;
+    font-size: 1.2rem;
 }
 
 #contact {
@@ -119,6 +120,7 @@ footer {
     margin: 10% auto;
     padding: 25px;
     line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 .cls-btn {
@@ -224,7 +226,7 @@ h2 {
 
 #game-section {
     background: darkslategray url(../images/leaves-constant-yearning.jpg) center center / 100% no-repeat;
-    min-height: calc(100vh - 122px);
+    min-height: calc(100vh - 134px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,7 +321,15 @@ h2 {
     }
 
     #homepage, #game-section {
-        min-height: calc(100vh - 114px);
+        min-height: calc(100vh - 122px);
+    }
+
+    #container-home {
+        width: 75%;
+    }
+
+    .modal-content {
+        font-size: 0.9rem;
     }
 }
 
