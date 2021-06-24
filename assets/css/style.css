@@ -161,8 +161,8 @@ h2 {
 /* Style and position elements on game screen */
 
 #tile-grid img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     margin: 4.5px;  
     border: 2px solid lightgray;
     border-radius: 3px;  
@@ -180,9 +180,10 @@ h2 {
 
 #game-buttons {
     background: #E4E1D0;
-    padding: 5px;
+    padding: 10px;
     border-radius: 4px;
     margin-top: 15px;
+    text-align: center;
 } 
 
 .game-btn {
@@ -193,10 +194,11 @@ h2 {
 
 .game-btn:hover {
     cursor: pointer;
+    color: red;
 }
 
 #game-quit {
-    float: right;
+    margin-left: 120px;
 }
 
 #game-area {
@@ -213,7 +215,7 @@ h2 {
 
 #scoring-area {
     background: #E4E1D0;
-    padding: 5px;
+    padding: 10px;
     border-radius: 4px;
     margin-bottom: 15px;
     text-align: center;
