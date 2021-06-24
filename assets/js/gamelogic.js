@@ -91,7 +91,7 @@ function clearValues() {
 function revealTile() {      
     // If tile is disabled, don't allow it to be clicked a second time to force a match, as discussed with mentor
     const isDisabled = this.getAttribute('data-disabled') === 'true';
-    if (isDisabled) {
+    if (isDisabled || tileChoiceId.length === 2) { // Prevents user clicking more than 2 tiles before match can be verified
         return;
     }
     let tileId = this.getAttribute('data-id');
@@ -143,6 +143,13 @@ function checkForGameCompletion() {
     }
 }
 
+// Function to control reset button
+
+function resetGame() {
+    alert('Resetting game, please wait...');
+    createGrid();
+}
+
 // Moved to separate function as discussed with mentor
 function updateTriesCounter() {
     document.getElementById('tries').innerText = ' ' + totalMatchAttempts.length;
@@ -150,7 +157,7 @@ function updateTriesCounter() {
 
 // Assign functionality to reset button on grid
 
-document.getElementById('game-reset').addEventListener('click', createGrid);
+document.getElementById('game-reset').addEventListener('click', resetGame);
 
 // Function to close the game completion modal, guidance from https://www.w3schools.com/howto/howto_css_modals.asp
 
