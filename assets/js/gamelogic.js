@@ -90,8 +90,9 @@ function clearValues() {
 
 function revealTile() {      
     // If tile is disabled, don't allow it to be clicked a second time to force a match, as discussed with mentor
+    // Also prevents user clicking more than 2 tiles before match can be verified
     const isDisabled = this.getAttribute('data-disabled') === 'true';
-    if (isDisabled || tileChoiceId.length === 2) { // Prevents user clicking more than 2 tiles before match can be verified
+    if (isDisabled || tileChoiceId.length === 2) { 
         return;
     }
     let tileId = this.getAttribute('data-id');
@@ -107,17 +108,17 @@ function revealTile() {
 // Check whether the tiles have matched or not and then empty the tileChoice and tileChoiceId arrays, as they can never be larger than 2 items  
 
 function verifyMatch() {
-    totalMatchAttempts.push(tileChoice);
+    totalMatchAttempts.push(tileChoice); // Update array for total matching attempts each time attempt is made
     let allTiles = document.querySelectorAll('img');
     const choiceOneId = tileChoiceId[0];
     const choiceTwoId = tileChoiceId[1];
     if (tileChoice[0] === tileChoice[1]) {
-        tilesMatched.push(tileChoice);        
+        tilesMatched.push(tileChoice); // Push matched tiles into corresponding array, used to determine game completion        
     } else {
         allTiles[choiceOneId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
         allTiles[choiceTwoId].setAttribute('data-disabled', 'false'); // If tiles don't match, enable them again
-        allTiles[choiceOneId].setAttribute('src', 'assets/images/tile-back.jpg');
-        allTiles[choiceTwoId].setAttribute('src', 'assets/images/tile-back.jpg');
+        allTiles[choiceOneId].setAttribute('src', 'assets/images/tile-back.jpg'); // "Flip" tiles back face down
+        allTiles[choiceTwoId].setAttribute('src', 'assets/images/tile-back.jpg'); // "Flip" tiles back face down
     }
     tileChoice = [];
     tileChoiceId = [];
