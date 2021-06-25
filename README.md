@@ -110,7 +110,57 @@ Should the user wish to reset the game at any point, a confirmation is shown as 
 
 ## Testing
 
+-	The user would like to play a game to test their memory<br><br>
+The user will first encounter the landing page when accessing the application. They can then click on "How To Play" button to view the rules before playing the game:
+![Image of rules](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/how-to-play.JPG)<br>
+Once they've familiarised themselves with the rules, clicking "Start Game" takes them to the game page, which is played by revealing the tiles in turn and remembering their positions so matches can be attempted:
+![Image of game page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-page.JPG)<br>
 
+-	The user is looking for a game to help them relax<br><br>
+The landing page of the application features a field of flowers, which should promote a calming effect:
+![Image of homepage](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/homepage.JPG)<br>
+The background to the game page is a wall of leaves, which should hopefully also promote calm:
+![Image of game page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-page.JPG)<br>
+The tile face sides feature floral images:
+![Image of tiles face up](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-tiles-face-up.JPG)<br>
+
+-	The user would like to play a game to pass the time<br><br>
+From the landing page, the user will click on "Start Game" to move onto the game page:
+![Image of game page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-page.JPG)<br><br>
+
+The application has been tested using the following browsers:<br>
+- Google Chrome<br>
+- Microsoft Edge<br>
+- Mozilla Firefox<br><br>
+Within Chrome and Edge, the following breakpoints were checked using responsive mode:<br>
+- Mobile S - 320px<br>
+- Mobile M - 375px<br>
+- Mobile L - 425px<br>
+- Tablet - 768px<br>
+- Laptop - 1024px<br>
+- Laptop L - 1440px<br><br>
+As well as the following emulated devices:<br>
+- Moto G4<br>
+- Galaxy S5<br>
+- Pixel 2<br>
+- Pixel 2 XL<br>
+- iPhone 5/SE<br>
+- iPhone 6/7/8<br>
+- iPhone 6/7/8 Plus<br>
+- iPhone X<br>
+- iPad<br>
+- iPad Pro<br>
+- Surface Duo<br><br>
+In Firefox, the following emulated device sizes were checked:<br>
+- Galaxy S9/S9+ Android 7.0<br>
+- iPad<br>
+- iPhone 6/7/8 iOS 11<br>
+- iPhone 6/7/8 Plus iOS 11<br>
+- iPhone X/XS iOS 12<br>
+- Kindle Fire HDX Linux
+
+The website was also checked at full width on a 1080p and 4K screen and tested on Oppo Find X2 Lite and Samsung Galaxy S20 FE 5G handsets. Media queries were added where necessary to maintain site viewability.<br>
+The website has been optimised for 1080p and smaller screens but works as expected on a 4K monitor. If viewing on a screen other than 1080p, the website scales accordingly. I also had a few friends test the application to ensure it functions as expected and barring some minor issues (which have since been resolved) the game plays as expected. Some of the minor issues noticed are included under bugs as below.<br>
 
 ### Bugs 
 
