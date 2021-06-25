@@ -191,8 +191,7 @@ h2 {
 
 .game-btn {
     font-size: 2rem;
-    background: transparent;
-    color: #2a2a2a;
+    background: transparent;    
 }
 
 .game-btn:hover {
@@ -212,8 +211,7 @@ h2 {
 
 #scoring-area p {
     display: inline;
-    font-size: 1.2rem;
-    color: #2a2a2a;
+    font-size: 1.2rem;    
 }
 
 #scoring-area {

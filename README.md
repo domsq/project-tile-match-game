@@ -2,6 +2,10 @@
 
 The aim of Floral Match is to find the matching pairs of tiles within as few tries as possible. There is a limit of 25 attempts to make things more challenging. Users will click on a tile to reveal it, note what image has been shown, then try to locate the matching tile. It is aimed at users who are looking to test their memory, those looking for a simple game to help them relax, possibly as part of a mindfulness activity, or users who just want a fun distraction to pass the time. It will have relaxing imagery such as a welcoming landing page image and also flowers on the face side of the tiles. 
 
+![Image of application pages on different screen sizes](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/am-i-responsive.JPG)
+
+[Link to deployed site](https://domsq.github.io/project-tile-match-game/index.html)
+
 ## UX
 
 ### Imagery
@@ -14,7 +18,30 @@ The fonts used for my website are "Chicle" for headings and "Lato" for the remai
 
 ### Colour scheme
  
-The fall back colour for the background images on the landing and game pages, should they not load correctly, is "darkslategray", which is a dark green \ blue colour. The colour used for the buttons is #5B5B5B, which is a medium grey colour. "Darkslategray" has also been used for the background colour to the heading on the landing page. The footer background colour is #E4E1D0, which is a pale sandy colour. The font colour is "whitesmoke". 
+The fall back colour for the background images on the landing and game pages, should they not load correctly, is "darkslategray", which is a dark green \ blue colour. The colour used for the buttons is #5B5B5B, which is a medium grey colour. "Darkslategray" has also been used for the font colour of the heading on the landing page. The content box on the landing page, the footer, the scoring and game control areas and also the modal popups have the colour #E4E1D0 for their background, which is a pale sandy colour. The font colour used for the buttons is "whitesmoke" and the main font colour otherwise is black.
+
+Please see below the wireframes for desktop, mobile and tablet:
+
+![Wireframe of homepage](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/homepage-wireframe.JPG)<br>
+![Wireframe of game page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-page-wireframe.JPG)<br>
+![Wireframe of game completion](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-complete-wireframe.JPG)<br>
+![Wireframe of contact us page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/contact-us-wireframe.JPG)<br>
+![Wireframe of homepage on tablet](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/tablet-homepage-wireframe.JPG)<br>
+![Wireframe of game page on tablet](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/tablet-game-page-wireframe.JPG)<br>
+![Wireframe of homepage on mobile](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/mobile-homepage-wireframe.JPG)<br>
+![Wireframe of game page on mobile](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/mobile-game-page-wireframe.JPG)
+
+In the final design of the application, it differs from the wireframes as follows:
+
+- The title, "start game" and "how to play" buttons on the landing page are grouped together rather than separate
+- The scoring area on the game page now shows "Attempts" instead of "Remaining tries"
+- The proposed timer has been removed from the scoring area on the game page
+- The game control buttons below the tile grid are more central in their container
+
+Earlier in the planning process, I was initially going to have the application consist of a single page, however decided to amend this to separate landing and game pages once discussed with my mentor. The "Contact Us" form button has also been moved into a footer. See below for all wireframes, including both the earlier and later versions:
+
+[Link to earlier wireframes here](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/floral-match-wireframes-v1.pdf)<br>
+[Link to later wireframes here](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/floral-match-wireframes-v2.pdf)
 
 User stories as follows:
 
