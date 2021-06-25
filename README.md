@@ -59,11 +59,42 @@ User stories as follows:
 
 ### Existing Features
 
+The application has a landing page with "How To Play", "Start Game" and "Contact Us" buttons to explain the rules of the game, allow the user to start playing or submit any feedback:
 
+![Image of homepage](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/homepage.JPG)
+
+Clicking on "How To Play" brings up the game rules:
+
+![Image of rules](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/how-to-play.JPG)
+
+Clicking on "Contact Us" brings up the following form:
+
+![Image of contact us page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/contact-us.JPG)
+
+If any feedback is entered into the form, a confirmation is displayed after clicking submit:
+
+![Image of contact us confirmation](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/contact-confirm.JPG)
+
+"Start Game" takes the user to the game page:
+
+![Image of game page](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-page.JPG)
+
+When playing the game, if the user successfully finds all matches they see the following confirmation:
+
+![Image of success message](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/success.JPG)
+
+If the user exceeds the allowed 25 attempts without finding all matches, the following is displayed:
+
+![Image of game over message](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/game-over.JPG)
+
+Should the user wish to reset the game at any point, a confirmation is shown as follows before the game resets:
+
+![Image of reset confirmation](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/reset-game-popup.JPG)
 
 ### Features Left to Implement
 
-
+- Allow the user to set the difficulty level through increasing \ decreasing the attempts allowed
+- Implement a timer function and allow the user to set a time limit if desired, rather than limiting the number of attempts
 
 ## Technologies Used
 
