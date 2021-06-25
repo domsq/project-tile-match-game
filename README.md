@@ -106,7 +106,8 @@ Should the user wish to reset the game at any point, a confirmation is shown as 
 - Gitpod - IDE used for development, incorporates git version control
 - GitHub - Repository where code is kept and also git version control
 - GitHub Pages - Platform that the website is deployed on
-- tinypng.com - Tool for optimising image sizes
+- [tinypng.com](https://tinypng.com) - Tool for optimising image sizes
+- [favicon.io](https://favicon.io/favicon-converter/) - Used for creating favicon file
 
 ## Testing
 
@@ -160,15 +161,36 @@ In Firefox, the following emulated device sizes were checked:<br>
 - Kindle Fire HDX Linux
 
 The website was also checked at full width on a 1080p and 4K screen and tested on Oppo Find X2 Lite and Samsung Galaxy S20 FE 5G handsets. Media queries were added where necessary to maintain site viewability.<br>
-The website has been optimised for 1080p and smaller screens but works as expected on a 4K monitor. If viewing on a screen other than 1080p, the website scales accordingly. I also had a few friends test the application to ensure it functions as expected and barring some minor issues (which have since been resolved) the game plays as expected. Some of the minor issues noticed are included under bugs as below.<br>
+The website has been optimised for 1080p and smaller screens but works as expected on a 4K monitor. If viewing on a screen other than 1080p, the website scales accordingly. I also had a few friends test the application to ensure it functions as expected and barring some minor issues (which have since been resolved) the game plays as expected. Factors such as clicking the back button, etc don't break the game functionality. Some of the minor issues noticed are included under "Bugs" as below.<br>
 
 ### Bugs 
 
-
+During development of my application, I encountered the following bugs:<br>
+- For the "How To Play" button, I had to rather use the 'onclick' HTML attribute instead of an event listener, as going from the landing page to game page would cause JavaScript errors due to the now missing elements that couldn't be seen by script.js.
+- As I required event listeners that relied upon the elements in game.html being loaded, I had to create a separate script file (gamelogic.js) to prevent errors when on the landing page.
+- Tile matches could be forced by clicking the same tile twice. This was corrected with additional code to disable the clicked tiles to prevent this from happening, unless they don't match of course.
+- Occasionally a non-matching tile would not flip back over and would stay face up and disabled. Corrected with an additional check in JavaScript.
+- There was significant vertical scrolling at resolutions such as 1600 x 900. Amended by resizing of elements, adjusting of margin and other tweaks.
 
 ### Validator Testing
 
+- HTML
+    - No errors but 1 warning returned when tested using the official W3C validator:<br>
+    - [Check of landing page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdomsq.github.io%2Fproject-tile-match-game%2F)<br>
+    - [Check of game page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdomsq.github.io%2Fproject-tile-match-game%2Fgame.html)<br>
+    The warning for game.html is simply because there isn't a heading element in use on that page. 
 
+- CSS
+    - No errors but 1 warning when tested using the official Jigsaw validator:<br>
+    ![Image of Jigsaw validation](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jigsaw-validation.JPG)<br>
+    ![Image of Jigsaw warning](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jigsaw-warning.JPG)<br>
+    The warning is simply stating it couldn't check an import link due to the vaidation method being direct input.
+
+- JavaScript
+    - No major issues reported with either JavaScript file:<br>
+    ![Image of JSHint check for script.js](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jshint-script-js.JPG)<br>
+    ![Image of JSHint check for gamelogic.js](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jshint-gamelogic-js.JPG)<br>
+    The warning for script.js, namely functions "openRulesPage" and "closeRulesPage" showing as unused is due to my having to use "onclick" attributes to call these functions. This was done as when moving from the landing page to the game page, the "How To Play" button element is no longer present and so would otherwise cause an error in JavaScript if an event listener was used for instance. 
 
 ## Deployment
 
