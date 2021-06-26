@@ -169,7 +169,7 @@ During development of my application, I encountered the following bugs:<br>
 - For the "How To Play" button, I had to rather use the 'onclick' HTML attribute instead of an event listener, as going from the landing page to game page would cause JavaScript errors due to the now missing elements that couldn't be seen by script.js.
 - As I required event listeners that relied upon the elements in game.html being loaded, I had to create a separate script file (gamelogic.js) to prevent errors when on the landing page.
 - Tile matches could be forced by clicking the same tile twice. This was corrected with additional code to disable the clicked tiles to prevent this from happening, unless they don't match of course.
-- Occasionally a non-matching tile would not flip back over and would stay face up and disabled. Corrected with an additional check in JavaScript.
+- Occasionally a non-matching tile would not flip back over and would stay face up and disabled. This was corrected with an additional check in JavaScript.
 - There was significant vertical scrolling at resolutions such as 1600 x 900. Amended by resizing of elements, adjusting of margin and other tweaks.
 
 ### Validator Testing
@@ -184,7 +184,7 @@ During development of my application, I encountered the following bugs:<br>
     - No errors but 1 warning when tested using the official Jigsaw validator:<br>
     ![Image of Jigsaw validation](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jigsaw-validation.JPG)<br>
     ![Image of Jigsaw warning](https://raw.githubusercontent.com/domsq/project-tile-match-game/master/screenshots/jigsaw-warning.JPG)<br>
-    The warning is simply stating it couldn't check an import link due to the vaidation method being direct input.
+    The warning is simply stating it couldn't check an import link due to the validation method being direct input.
 
 - JavaScript
     - No major issues reported with either JavaScript file:<br>
@@ -206,7 +206,7 @@ My website was deployed via GitHub Pages as follows:
 
 ### Content
 
-Concept for the website design and layout are my own creation with additional feedback provided by my mentor. For the media used on the website, please see below.<br>
+Application design and layout are my own creation with additional feedback provided by my mentor. For the media used on the website, please see below.<br>
 
 ### Media
 
